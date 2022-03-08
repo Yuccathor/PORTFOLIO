@@ -1,0 +1,64 @@
+/* Toggle menu */
+  
+.burger {
+    display:block;
+    position:relative;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;   
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background: #3b4358; 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0; 
+    background: #3b4358; 
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  nav .bar {
+    width:0;
+    background:transparent;    
+  }
+  #toggle:checked + nav .bar::before {
+    transform:rotate(45deg);
+  }
+  #toggle:checked + nav .bar::after {
+    transform:rotate(-45deg);
+  }
+  
+  .navbar_btn{
+    padding-bottom: 2rem;
+  }
+
+  label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80px;
+    margin: 0;
+  }
+
+  .burger{
+    display: block;
+    padding-right: 75px;
+
+  }
